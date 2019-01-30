@@ -1,0 +1,64 @@
+<COMMENT>
+Pesticide D, 1 day before emergence     <FOCUS DUMMY D>
+<END COMMENT>
+<NUMBER OF SOIL HORIZONS>
+ 0 
+<END NUMBER OF SOIL HORIZONS>
+<APPLICATION>
+ 1    0    9    <number of locations absolute app/relative app>
+022            <number of application location>
+-01  00  01   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  04   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  07   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  10   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  13   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  16   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  19   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  22   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  25   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  28   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  31   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  34   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  37   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  40   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  43   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  46   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  49   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  52   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  55   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  58   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  61   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+-01  00  64   1    0    0    0    0   <day month year app_rate app_depth frpex time>
+ 1    <pesticide appl. flag: 1=soil 2 =linear 3=exp. foliar 4=manually
+<END APPLICATION>
+<FLAGS>
+ 1   1   <henry(0=direct 1=calc.)  kd_flag(0=direct 1=calc.)>
+<END FLAGS>
+<VOLATILIZATION>
+<henry       solub.      molmass     vap.press   diff air    depth volat.  Hv        Temperature>
+  3.33E-04   90    300     1.00E-04   0.0498    0.1    98400    20 
+  6.67E-10   180    300     4.00E-04   0.0498    0.1    98400    30 
+<END VOLATILIZATION>
+<PLANT UPTAKE>
+ 0.5      <plant uptake factor
+<END PLANT UPTAKE>
+<DEGRADATION>
+<degrate    degtemp     q10         moist-abs   moist-rel   moist-exp   rel deg neq sites
+  0.00E+00   0           0           0           0           0         0        <Met A1>
+  0.00E+00   20          2           19          0           0         0        <Met B1>
+  0.00E+00   20          2           19          0           0         0        <Met C1>
+  0.00E+00   20          2           19          0           0         0        <Met D1>
+ 0.0346570   20          2.2         0           100         0.7       0        <BR/CO2>
+ 0                 <0 = degradation according to degradation factors, 1 = constant with depth,2 individual,3 = degradation according to degradation factors, 4 = constant with depth,5 individual, >2 deg in liquid phase only)
+<PHOTODEGRADATION>
+<rate 1/n>  <I_Ref W/m²>
+ 0   500  0   0  0   0  0   0  0   0 
+<END DEGRADATION>
+<ADSORPTION>
+<Koc-value    Fr.exp.Koc  pH          pKa     limit for Freundl.  ann.incr.> <k_doc> <% change> KOC2      pH2 f_neq       kdes>
+ 60          0.9        -99          20          0                0      0     1    -99    -99     0     0 
+<END ADSORPTION>
+<DEPTH DEPENDENT SORPTION AND TRANSFORMATION VALUES>
+<Kd          Fr.exp.     Met A1   Met B1   Met C1   Met D1   BR/CO2 >
+<END DEPTH DEPENDENT>
+<END PSM>

@@ -1,0 +1,16 @@
+FOCUS Summary Output File
+
+Model Version:          	FOCUSPELMO 5.5.3
+Date of this simulation:	27/01/2017 09:43:44
+Pesticide input file:   	Pesticide_D
+Simulated crop:         	Beans (field)
+
+
+Results for ACTIVE SUBSTANCE (FOCUS DUMMY D)
+----------------------------------------------------------------------------------
+ Location        	Selected	Flux	    Percolate	Conc.
+                 	Period  	(g/ha)	       (L/m²)	(µg/L)  
+----------------------------------------------------------------------------------
+Porto (O)        	(14/10)	   0.8200000	     1456.40	0.060
+
+

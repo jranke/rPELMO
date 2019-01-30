@@ -1,0 +1,25 @@
+title: rPELMO
+
+template:
+  bootswatch: spacelab
+
+reference:
+  - title: Create input files
+    contents:
+      - PELMO_psm
+  - title: Run PELMO
+    contents:
+      - PELMO_runs
+  - title: Data
+    contents:
+      - FOCUS_PELMO_crop_sze_names
+      - FOCUS_PELMO_crops
+      - FOCUS_PELMO_location_codes
+  - title: Utilities
+    contents:
+      - create_run_list
+      - PELMO_path
+      - focus_80th
+      - get_flux
+      - get_interval
+      - sum_periods

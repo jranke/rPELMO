@@ -1,0 +1,17 @@
+FOCUS Summary Output File
+
+Model Version:          	FOCUSPELMO 5.5.3
+Date of this simulation:	25/01/2017 10:20:17
+Pesticide input file:   	Pesticide_D_1_day_pre_em_every_third_year
+Simulated crop:         	Potatoes
+
+
+Results for ACTIVE SUBSTANCE (FOCUS DUMMY D)
+----------------------------------------------------------------------------------
+ Location        	Selected	Flux	    Percolate	Conc.
+                 	Period  	(g/ha)	       (L/m²)	(µg/L)  
+----------------------------------------------------------------------------------
+Châteaudun (C)   	(2/8)	   0.1683410	     1767.00	0.010
+Hamburg (H)      	(15/16)	   0.2991540	     2136.80	0.014
+
+

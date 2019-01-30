@@ -1,0 +1,9 @@
+commit b463d9b33cea03b387bca9e10245e8e7b5c4d7e0
+Author: Johannes Ranke <jranke@uni-bremen.de>
+Date:   2019-01-31 00:02:34 +0100
+
+    Initial commit
+    
+    The functions for running PELMO were separated out from the pfm package.
+    The function PELMO_psm for creating FOCUS PELMO input files is published
+    for the first time.

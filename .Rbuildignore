@@ -1,0 +1,9 @@
+^rPELMO_.*.tar.gz
+^rPELMO_.*.zip
+^GNUmakefile$
+^README.html$
+^build.log$
+^test.log$
+^test.R$
+^_pkgdown.yml$
+^docs$
