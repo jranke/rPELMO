@@ -7,7 +7,7 @@ Authors@R: person("Johannes Ranke", email = "jranke@uni-bremen.de",
                   role = c("aut", "cre", "cph"),
                   comment = c(ORCID = "0000-0003-4371-6538"))
 Description: Create input files for FOCUS PELMO, set up runs
-    for execution, and evaluate them.
+    for execution and evaluate them.
 Imports:
     pfm
 Suggests:
