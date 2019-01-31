@@ -26,7 +26,7 @@ install_github("jranke/rPELMO", quick = TRUE)
 
 ## Use
 
-Please refer to the [reference](http://pkgdown.jrwb.de/pfm/rPELMO/index.html).
+Please refer to the [reference](http://pkgdown.jrwb.de/rPELMO/reference/index.html).
 
 ## Examples
 
