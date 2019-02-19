@@ -1,4 +1,16 @@
-commit b463d9b33cea03b387bca9e10245e8e7b5c4d7e0
+commit 4fec115b6839a0ef1c05278a840ce0b18e5be3e9
+Author: Johannes Ranke <jranke@uni-bremen.de>
+Date:   2019-01-31 01:24:39 +0100
+
+    Fix a link
+
+commit 1d59a7e731e2dd0721825c8c965a30d9c28a4789
+Author: Johannes Ranke <jranke@uni-bremen.de>
+Date:   2019-01-31 01:23:08 +0100
+
+    Trivial commit to initialise pkgdown
+
+commit e6b7fd5af92bedd1619839dbf476a5b6c43582dc
 Author: Johannes Ranke <jranke@uni-bremen.de>
 Date:   2019-01-31 00:02:34 +0100
 

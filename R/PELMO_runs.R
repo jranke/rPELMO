@@ -272,11 +272,11 @@ run_PELMO <- function(runs, version = "5.5.3", PELMO_base = "auto",
 
 #' Create a path of run directories as the PELMO GUI does
 #'
-#' @export
 #' @importFrom utils data
 #' @param psm The psm identifier
 #' @param crop The PELMO crop acronym
 #' @param scenario The scenario
+#' @export
 PELMO_path <- function(psm, crop, scenario = NA) {
   if (crop %in% names(FOCUS_PELMO_crops)) {
     crop <- FOCUS_PELMO_crops[crop]

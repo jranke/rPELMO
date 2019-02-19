@@ -1,9 +1,9 @@
 library(testthat)
-library(pfm)
+library(rPELMO)
 context("Create PELMO runs from psm files and execute them")
 PELMO_base <- system.file("FOCUSPELMO.553", package = "PELMO.installeR")
 
-test_archive <- system.file("testdata/FOCUS_PELMO.tar.bz2", package = "pfm")
+test_archive <- system.file("testdata/FOCUS_PELMO.tar.bz2", package = "rPELMO")
 test_dir <- tempdir()
 untar(test_archive, exdir = test_dir, compressed = "bzip2")
 
@@ -17,7 +17,7 @@ runs <- list(
     pot = c("Cha", "Ham")),
   list(
     psm = "Pesticide_D_1_May_every_other_year_mets",
-    win = names(FOCUS_GW_scenarios_2012$names)))
+    win = names(pfm::FOCUS_GW_scenarios_2012$names)))
 
 # Check if we have wine on the path
 wine_installed <- system('wine --version', ignore.stdout = TRUE) == 0
@@ -69,7 +69,7 @@ test_that("PELMO runs can be run and give the expected result files", {
   skip_if_no_wine()
   skip_on_cran()
 
-  run_PELMO(runs, cores = 7)
+  run_PELMO(runs, cores = 15)
 
   plm_files <- c("CHEM.PLM", "ECHO.PLM",
                  "KONZCHEM.PLM", "KONZC_A1", "KONZC_B1",
@@ -107,7 +107,7 @@ test_that("PELMO runs are correctly evaluated", {
 
   pfm_PECgw <- evaluate_PELMO(runs)
 
-  # Check that if output is the same as in the test archive
+  # Check if output is the same as in the test archive
   for (run in runs) {
     psm <- run$psm
     crops <- setdiff(names(run), "psm")
@@ -135,7 +135,7 @@ test_that("PELMO runs are correctly evaluated", {
           results[[acronym]]$focus <- tmp80[[1, "V5"]]
         }
 
-        period_pfm_file <- file.path(PELMO_base, "FOCUS", pp, "period_pfm.rda")
+        period_pfm_file <- file.path(PELMO_base, "FOCUS", pp, "period_rPELMO.rda")
         load(period_pfm_file)
 
         #message(psm, " ", crop, " ", scenario)
@@ -144,7 +144,7 @@ test_that("PELMO runs are correctly evaluated", {
         # as we need to adapt the tolerance
         for (acronym in acronyms) {
           p_pelmo <- results[[acronym]]$periods
-          p_test <- results_pfm[[acronym]]$periods
+          p_test <- results[[acronym]]$periods
           expect_equal(p_test$flux, p_pelmo$flux, tol = 1e-6)
           expect_equal(p_test$percolate, p_pelmo$percolate)
           # PELMO sets the concentration to 0 when the percolate is zero.
@@ -154,7 +154,7 @@ test_that("PELMO runs are correctly evaluated", {
           expect_equal(p_test$conc, p_pelmo$conc, tol = 1e-3, scale = 1)
 
           # FOCUS PEC
-          expect_equal(results_pfm[[acronym]]$focus, results[[acronym]]$focus,
+          expect_equal(results[[acronym]]$focus, results[[acronym]]$focus,
                        tol = 1e-3, scale = 1)
         }
       }
@@ -167,7 +167,7 @@ test_that("PECgw from FOCUS summary files can be reproduced", {
   skip_on_cran()
 
   pfm_PECgw <- evaluate_PELMO(runs)
-  
+
   focus_summary <- list()
 
   for (run in runs) {
@@ -182,7 +182,7 @@ test_that("PECgw from FOCUS summary files can be reproduced", {
       # have results for one crop per psm file, so the crop is not in the file
       # name.
       sumfile_path <- system.file(paste0("testdata/FOCUS_Summary_", psm,
-                                         ".txt"), package = "pfm")
+                                         ".txt"), package = "rPELMO")
       sumfile <- readLines(sumfile_path, encoding = "latin1")
       result_anchors <- grep("Results for", sumfile)
       acronyms <- gsub(".*\\((.*)\\).*", "\\1", sumfile[result_anchors])

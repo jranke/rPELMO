@@ -2,7 +2,7 @@ Package: rPELMO
 Type: Package
 Title: Utilities for working with FOCUS PELMO
 Version: 0.1.1
-Date: 2019-01-31
+Date: 2019-02-19
 Authors@R: person("Johannes Ranke", email = "jranke@uni-bremen.de",
                   role = c("aut", "cre", "cph"),
                   comment = c(ORCID = "0000-0003-4371-6538"))
@@ -13,6 +13,7 @@ Imports:
 Suggests:
     PELMO.installeR,
     testthat
+Remotes: jranke/PELMO.installeR
 License: GPL
 LazyLoad: yes
 LazyData: yes
