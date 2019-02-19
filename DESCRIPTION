@@ -13,7 +13,8 @@ Imports:
 Suggests:
     PELMO.installeR,
     testthat
-Remotes: jranke/PELMO.installeR
+Remotes: jranke/pfm,
+    jranke/PELMO.installeR
 License: GPL
 LazyLoad: yes
 LazyData: yes
